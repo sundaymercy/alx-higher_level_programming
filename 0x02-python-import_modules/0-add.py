@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    """Print sum  of 1 and 2"""
+    """Print the sum of 1 and 2"""
 
-    from sum_0 import sum
+    from add_0 import add
 
     a = 1
     b = 2
