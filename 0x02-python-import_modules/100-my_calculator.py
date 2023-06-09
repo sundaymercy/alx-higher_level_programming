@@ -2,14 +2,14 @@
 
 if __name__ == "__main__":
     """A program that handles the basic arithmetic in operations."""
-    from calculator_1 import sum, difference, mult, div
+    from calculator_1 import sum, sub, mul, div
     import sys
 
     if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    ops = {"+": add, "-": sub, "*": mul, "/": div}
+    ops = {"+": sum, "-": sub, "*": mul, "/": div}
     if sys.argv[2] not in list(ops.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
