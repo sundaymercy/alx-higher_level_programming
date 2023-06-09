@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    """A program that handles basic arithmetic operations."""
-    from calculator_1 import summation, differences, multiply, div
+    """A program that handles the basic arithmetic in operations."""
+    from calculator_1 import sum, difference, mult, div
     import sys
 
     if len(sys.argv) - 1 != 3:
