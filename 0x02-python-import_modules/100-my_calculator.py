@@ -1,25 +1,19 @@
-# 100-my_calculator.py
+#!/usr/bin/python3
 
-def sum(num1, num2):
-    return num1 + num2
+if __name__ == "__main__":
+    """A program that handles basic arithmetic operations."""
+    from calculator_1 import summation, differences, multiply, div
+    import sys
 
-def differences(num1, num2):
-    return num1 - num2
+    if len(sys.argv) - 1 != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
 
-def multiply(num1, num2):
-    return num1 * num2
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in list(ops.keys()):
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
-def divide(num1, num2):
-    if num2 != 0:
-        return num1 / num2
-    else:
-        return "Error: Cannot divide by zero"
-
-# Test the calculator functions
-num1 = 10
-num2 = 5
-
-print("sum:", add(num1, num2))
-print("diferences:", subtract(num1, num2))
-print("Multiplication:", multiply(num1, num2))
-print("Division:", divide(num1, num2))
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
