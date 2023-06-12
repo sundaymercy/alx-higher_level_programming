@@ -1,4 +1,4 @@
-"Python.h"
+nclude  "Python.h"
 
 void print_python_list_info(PyObject *p)
 {
@@ -11,7 +11,7 @@ void print_python_list_info(PyObject *p)
     {
       list = (PyListObject *)p;
       size = list->ob_base.ob_size;
-      printf("[*] Size of the Python List = %ld\n", size);
+      printf("[*] Sizes of the Python List = %ld\n", size);
       printf("[*] Allocated = %ld\n", list->allocated);
       for (a = 0; a < size; a++)
 	{
@@ -19,3 +19,5 @@ void print_python_list_info(PyObject *p)
 	  type = object->ob_type;
 	  printf("Element %ld: %s\n", a, type->tp_name);
 	}
+    }
+}
